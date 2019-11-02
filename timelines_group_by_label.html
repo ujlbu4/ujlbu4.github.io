@@ -1,0 +1,112 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["timeline"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+
+    var container = document.getElementById('example3.1');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'string', id: 'Position' });
+    dataTable.addColumn({ type: 'string', id: 'Name' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+      // [ 'President', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
+      // [ 'President', 'John Adams', new Date(1797, 2, 4), new Date(1801, 2, 4) ],
+      // [ 'President', 'Thomas Jefferson', new Date(1801, 2, 4), new Date(1809, 2, 4) ],
+      // [ 'Vice President', 'John Adams', new Date(1789, 3, 21), new Date(1797, 2, 4)],
+      // [ 'Vice President', 'Thomas Jefferson', new Date(1797, 2, 4), new Date(1801, 2, 4)],
+      // [ 'Vice President', 'Aaron Burr', new Date(1801, 2, 4), new Date(1805, 2, 4)],
+      // [ 'Vice President', 'George Clinton', new Date(1805, 2, 4), new Date(1812, 3, 20)],
+      // [ 'Secretary of State', 'John Jay', new Date(1789, 8, 25), new Date(1790, 2, 22)],
+      // [ 'Secretary of State', 'Thomas Jefferson', new Date(1790, 2, 22), new Date(1793, 11, 31)],
+      // [ 'Secretary of State', 'Edmund Randolph', new Date(1794, 0, 2), new Date(1795, 7, 20)],
+      // [ 'Secretary of State', 'Timothy Pickering', new Date(1795, 7, 20), new Date(1800, 4, 12)],
+      // [ 'Secretary of State', 'Charles Lee', new Date(1800, 4, 13), new Date(1800, 5, 5)],
+      // [ 'Secretary of State', 'John Marshall', new Date(1800, 5, 13), new Date(1801, 2, 4)],
+      // [ 'Secretary of State', 'Levi Lincoln', new Date(1801, 2, 5), new Date(1801, 4, 1)],
+      // [ 'Secretary of State', 'James Madison', new Date(1801, 4, 2), new Date(1809, 2, 3)]
+        ['location', 'tokyo', new Date(2019, 10, 30, 11, 20), new Date(2019, 11, 2, 11)],
+        ['accomodation', 'capsule hotel', new Date(2019, 10, 30, 15), new Date(2019, 11, 1, 10)],
+        ['affairs', 'local sightseeings', new Date(2019, 10, 30, 16), new Date(2019, 10, 30, 20)],
+        ['night', 'night', new Date(2019, 10, 30, 23), new Date(2019, 11, 1, 8)],
+        ['affairs', 'local sightseeings', new Date(2019, 11, 1, 12), new Date(2019, 11, 1, 19)],
+        ['night', 'night', new Date(2019, 11, 1, 23), new Date(2019, 11, 2, 8)],
+        ['accomodation', 'hotel (Nishitetsu Inn Nihonbashi)', new Date(2019, 11, 1, 19), new Date(2019, 11, 2, 10)],
+
+        ['road', 'schinkansen to osaka', new Date(2019, 11, 2, 11), new Date(2019, 11, 2, 13)],
+
+        ['location', 'osaka', new Date(2019, 11, 2, 13), new Date(2019, 11, 5, 11)],
+        ['accomodation', 'ryokan (Yamatoya Honten Ryokan Osaka)', new Date(2019, 11, 2, 15), new Date(2019, 11, 3, 10)],
+        ['affairs', 'local sightseeings', new Date(2019, 11, 2, 15), new Date(2019, 11, 2, 18)],
+        ['affairs', 'ryokan dinner', new Date(2019, 11, 2, 19), new Date(2019, 11, 2, 22)],
+        ['night', 'night',  new Date(2019, 11, 2, 23), new Date(2019, 11, 3, 8)],
+        ['affairs', 'trip to nara',  new Date(2019, 11, 3, 10), new Date(2019, 11, 3, 18)],
+        ['accomodation', 'hotel (Hotel Universal Port Vita)', new Date(2019, 11, 3, 19), new Date(2019, 11, 5, 10)],
+        ['night', 'night', new Date(2019, 11, 3, 23), new Date(2019, 11, 4, 8)],
+        ['affairs', 'park (Universal Japan)', new Date(2019, 11, 4, 9), new Date(2019, 11, 4, 18)],
+        ['night', 'night', new Date(2019, 11, 4, 23), new Date(2019, 11, 5, 8)],
+
+        ['road', 'schinkansen to kyoto', new Date(2019, 11, 5, 11), new Date(2019, 11, 5, 13)],
+
+        ['location', 'kyoto',  new Date(2019, 11, 5, 15), new Date(2019, 11, 8, 11)],
+        ['accomodation', 'ryokan (Ryokan Shimizu)', new Date(2019, 11, 5, 15), new Date(2019, 11, 6, 10)],
+        ['affairs', 'local sightseeings',  new Date(2019, 11, 5, 16), new Date(2019, 11, 5, 19)],
+        ['night', 'night',  new Date(2019, 11, 5, 23), new Date(2019, 11, 6, 8)],
+        ['affairs', 'local sightseeings',  new Date(2019, 11, 6, 10), new Date(2019, 11, 6, 19)],
+        ['accomodation', 'ryokan (Ryokan Yamazaki)',  new Date(2019, 11, 6, 19), new Date(2019, 11, 7, 10)],
+        ['night', 'night',  new Date(2019, 11, 6, 23), new Date(2019, 11, 7, 8)],
+        ['affairs', 'local sightseeings',  new Date(2019, 11, 7, 10), new Date(2019, 11, 7, 19)],
+        ['accomodation', 'capsule hotel (First Cabin Kyoto Karasuma)',  new Date(2019, 11, 7, 19), new Date(2019, 11, 8, 10)],
+        ['night', 'night',  new Date(2019, 11, 7, 23), new Date(2019, 11, 8, 8)],
+
+        ['road', 'schinkansen to tokyo',  new Date(2019, 11, 8, 12), new Date(2019, 11, 8, 15)],
+        
+        ['location', 'tokyo',  new Date(2019, 11, 8, 15), new Date(2019, 11, 15, 11)],
+        ['accomodation', 'hotel (APA Hotel Asakusabashi-Ekikita)',  new Date(2019, 11, 8, 16), new Date(2019, 11, 15, 10)],
+    ]);
+
+    var options = {
+        height: 800,
+        // width: 3600,
+        hAxis: {
+            // format: 'M/d',
+            viewWindow: {
+              min: new Date(2019, 10, 30),
+              max: new Date(2015, 11, 16)
+            },
+            gridlines: {
+              count: -1,
+              units: {
+                days: {format: ['MMM dd']},
+                hours: {format: ['HH:mm', 'ha']},
+              }
+            },
+            minorGridlines: {
+              units: {
+                hours: {format: ['hh:mm:ss a', 'ha']},
+                minutes: {format: ['HH:mm a Z', ':mm']}
+              }
+            }
+        },
+
+        timeline: { 
+          groupByRowLabel: true ,
+          colorByRowLabel: true
+        }
+      };
+
+    chart.draw(dataTable, options);
+  }
+</script>
+
+<div id="example3.1" style="height: 500px;"></div>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
